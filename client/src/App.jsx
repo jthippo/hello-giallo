@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import "./App.css";
+import Form from "../components/Form";
 
 function App() {
   const [gialli, setGialli] = useState([]);
@@ -20,6 +21,7 @@ function App() {
     await axios.delete(API);
     getGialli();
   }
+
   return (
     <>
       <h1>Hello Giallo</h1>
@@ -27,13 +29,17 @@ function App() {
         return (
           <div key={giallo._id}>
             <h2>{giallo.title}</h2>
-            <p>{giallo.year}</p>
+            <h3>{giallo.year}</h3>
             <button onClick={() => deleteGialli(giallo._id)}>
               Delete giallo
             </button>
+
+            <Form giallo={giallo} getGialli={getGialli} />
           </div>
         );
       })}
+      <h2>Add giallo</h2>
+      <Form gialli={gialli} setGialli={setGialli} />
     </>
   );
 }
