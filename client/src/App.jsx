@@ -2,6 +2,10 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import "./App.css";
 import Form from "../components/Form";
+import About from "../pages/About";
+import Admin from "../pages/Admin";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
 
 function App() {
   const [gialli, setGialli] = useState([]);
@@ -23,8 +27,14 @@ function App() {
   }
 
   return (
-    <>
+    <BrowserRouter>
       <h1>Hello Giallo</h1>
+
+      <Routes>
+        <Route path="/" element={<About />} />
+        <Route path="/admin" element={<Admin useAuth0={useAuth0} />} />
+      </Routes>
+
       {gialli.map((giallo) => {
         return (
           <div key={giallo._id}>
@@ -40,7 +50,7 @@ function App() {
       })}
       <h2>Add giallo</h2>
       <Form gialli={gialli} setGialli={setGialli} />
-    </>
+    </BrowserRouter>
   );
 }
 
