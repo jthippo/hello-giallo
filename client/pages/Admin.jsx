@@ -1,31 +1,43 @@
-import LoginButton from "../components/LoginButton";
-import LogoutButton from "../components/LogoutButton";
-import Profile from "../components/Profile";
+import Form from "../components/Form";
+import axios from "axios";
+import { useState, useEffect } from "react";
 
 export default function Admin() {
-  const { user, isAuthenticated, isLoading } = useAuth0();
+  const [gialli, setGialli] = useState([]);
 
-  if (isLoading) {
-    return <div>Loading ...</div>;
+  useEffect(() => {
+    getGialli();
+  }, []);
+
+  async function getGialli() {
+    const API = `http://localhost:8080/gialli/`;
+    const res = await axios.get(API);
+    setGialli(res.data);
+  }
+
+  async function deleteGialli(id) {
+    const API = `http://localhost:8080/gialli/${id}`;
+    await axios.delete(API);
+    getGialli();
   }
 
   return (
-    <>
-      {isAuthenticated ? (
-        <div>
-          <Profile />
-          <LogoutButton />
-        </div>
-      ) : (
-        <LoginButton />
-      )}
+    <div>
+      {gialli.map((giallo) => {
+        return (
+          <div key={giallo._id}>
+            <h2>{giallo.title}</h2>
+            <h3>{giallo.year}</h3>
+            <button onClick={() => deleteGialli(giallo._id)}>
+              Delete giallo
+            </button>
 
-      <h1>Auth0 Demo</h1>
-      <p>It is logging in and also out</p>
-
-      {user?.email === "hellomikefoster@gmail.com" && (
-        <a href="https://google.com">You are logged in so go here now</a>
-      )}
-    </>
+            <Form giallo={giallo} getGialli={getGialli} />
+          </div>
+        );
+      })}
+      <h2>Add giallo</h2>
+      <Form gialli={gialli} setGialli={setGialli} />
+    </div>
   );
 }
