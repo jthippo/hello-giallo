@@ -1,8 +1,9 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 import About from "../pages/About";
 import Login from "../pages/Login";
-import Admin from "../pages/Admin";
+import Admin from "../components/Admin";
+import Home from "../pages/Home";
 
 function App() {
   return (
@@ -11,12 +12,18 @@ function App() {
       <p>Murder is bad</p>
 
       <Routes>
-        <Route path="/" element={<Login />} />
+        <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/admin" element={<Admin />} />
       </Routes>
 
-      <footer>Link to About page here, surely?</footer>
+      <footer>
+        <div>
+          <Link to="/about">About</Link>
+          <Link to="/login">Admin Zone</Link>
+        </div>
+      </footer>
     </BrowserRouter>
   );
 }

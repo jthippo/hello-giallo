@@ -1,7 +1,7 @@
 import LoginButton from "../components/LoginButton";
 import LogoutButton from "../components/LogoutButton";
 import Profile from "../components/Profile";
-import Admin from "./Admin";
+import Admin from "../components/Admin";
 import { useAuth0 } from "@auth0/auth0-react";
 
 export default function Login() {
