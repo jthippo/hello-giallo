@@ -2,11 +2,12 @@ import axios from "axios";
 import { useState } from "react";
 
 export default function Home() {
-  const [from, setFrom] = useState("1963");
-  const [to, setTo] = useState("1987");
+  const [from, setFrom] = useState("1968");
+  const [to, setTo] = useState("1975");
   const [rating, setRating] = useState(5.0);
-  const [sort, setSort] = useState("vote_average.desc");
+  const [sort, setSort] = useState("popularity.desc");
   const [giallo, setGiallo] = useState({});
+  const gialloDate = new Date(giallo.year);
 
   async function handleAPI(event) {
     event.preventDefault();
@@ -19,11 +20,11 @@ export default function Home() {
     <>
       <form onSubmit={handleAPI}>
         <input
-          placeholder="1963"
+          placeholder="1968"
           onChange={(event) => setFrom(event.target.value)}
         ></input>
         <input
-          placeholder="1987"
+          placeholder="1975"
           onChange={(event) => setTo(event.target.value)}
         ></input>
         <input
@@ -31,22 +32,23 @@ export default function Home() {
           onChange={(event) => setRating(event.target.value)}
         ></input>
         <select onChange={(event) => setSort(event.target.value)}>
+          <option value="popularity.desc">Most popular</option>
+          <option value="popularity.asc">Least popular</option>
           <option value="vote_average.desc">Highest rating</option>
           <option value="vote_average.asc">Lowest rating</option>
           <option value="primary_release_date.desc">Newest</option>
           <option value="primary_release_date.asc">Oldest</option>
-          <option value="popularity.desc">Most popular</option>
-          <option value="popularity.asc">Least popular</option>
         </select>
         <button>Hello Giallo</button>
 
         {giallo.title && (
           <div className="results">
             <img src={giallo.poster} />
-            {giallo.title}
-            {giallo.year}
-            {giallo.rating}
-            <a href={giallo.link}>View on TMDB</a>
+            {giallo.title}({gialloDate.getFullYear()}){giallo.rating}
+            <a target="_blank" href={giallo.link}>
+              View on TMDB
+            </a>
+            {/* ADD TO DATABASE */}
           </div>
         )}
       </form>

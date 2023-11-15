@@ -48,7 +48,7 @@ app.delete("/gialli/:id", async (request, response) => {
 app.get("/API", async (request, response) => {
   const { from, to, rating, sort } = request.query;
 
-  const gialloAPI = `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.API_KEY}&with_original_language=it&with_genres=27,53|27,9648&primary_release_date.gte=${from}-01-01&primary_release_date.lte=${to}-12-31&vote_average.gte=${rating}&sort_by=${sort}`;
+  const gialloAPI = `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.API_KEY}&with_original_language=it&with_genres=53|27,53|27,9648|53,9648&primary_release_date.gte=${from}-01-01&primary_release_date.lte=${to}-12-31&vote_average.gte=${rating}&sort_by=${sort}`;
   const res_gialli = await axios.get(gialloAPI);
 
   const wrangledData = {

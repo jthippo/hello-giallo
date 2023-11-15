@@ -20,6 +20,7 @@ function App() {
 
       <footer>
         <div>
+          <Link to="/">Home</Link>
           <Link to="/about">About</Link>
           <Link to="/login">Admin Zone</Link>
         </div>
