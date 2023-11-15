@@ -22,9 +22,9 @@ function App() {
           </p>
         </div>
         <nav>
-          <Link to="/">Home</Link>
-          <Link to="/login">Admin</Link>
-          <Link to="/about">About</Link>
+          <Link to="/">HOME</Link>
+          <Link to="/login">ADMIN</Link>
+          <Link to="/about">ABOUT</Link>
         </nav>
       </header>
 
