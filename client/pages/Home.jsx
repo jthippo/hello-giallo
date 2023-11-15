@@ -40,18 +40,16 @@ export default function Home() {
           <option value="primary_release_date.asc">Oldest</option>
         </select>
         <button>Hello Giallo</button>
-
-        {giallo.title && (
-          <div className="results">
-            <img src={giallo.poster} />
-            {giallo.title}({gialloDate.getFullYear()}){giallo.rating}
-            <a target="_blank" href={giallo.link}>
-              View on TMDB
-            </a>
-            {/* ADD TO DATABASE */}
-          </div>
-        )}
       </form>
+      {giallo.title && (
+        <div className="results">
+          <img src={giallo.poster} />
+          {giallo.title}({gialloDate.getFullYear()}){giallo.rating}
+          <a target="_blank" href={giallo.link}>
+            View on TMDB
+          </a>
+        </div>
+      )}
     </>
   );
 }
