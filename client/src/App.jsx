@@ -8,8 +8,25 @@ import Home from "../pages/Home";
 function App() {
   return (
     <BrowserRouter>
-      <h1>Hello Giallo</h1>
-      <p>I don't think you're ready for this gialli</p>
+      <header>
+        <div>
+          <h1>Hello Giallo</h1>
+          <p>
+            <b>giallo </b>
+            <i>noun </i>/d͡ʒal.lo/
+            <br />
+            <i>
+              A genre of Italian cinema mixing mystery and thriller with
+              psychological elements.
+            </i>
+          </p>
+        </div>
+        <nav>
+          <Link to="/">Home</Link>
+          <Link to="/login">Admin</Link>
+          <Link to="/about">About</Link>
+        </nav>
+      </header>
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -18,13 +35,7 @@ function App() {
         <Route path="/admin" element={<Admin />} />
       </Routes>
 
-      <footer>
-        <div>
-          <Link to="/">Home</Link>
-          <Link to="/login">Admin Zone</Link>
-          <Link to="/about">About</Link>
-        </div>
-      </footer>
+      <footer></footer>
     </BrowserRouter>
   );
 }

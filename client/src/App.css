@@ -1,9 +1,44 @@
 * {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-/* h1 {
-  font-family: Cairo, serif;
-  font-size: 40px;
+header {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header p {
   color: yellow;
-} */
+  padding-left: 2rem;
+  padding-bottom: 1rem;
+}
+
+h1 {
+  font-family: Cairo, serif;
+  font-size: 48px;
+  color: yellow;
+  padding: 1rem 2rem;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-right: 2rem;
+  align-items: flex-start;
+}
+
+nav a {
+  font-family: Cairo, serif;
+  color: yellow;
+  transition-duration: 0.4s;
+  padding: 0.5rem;
+}
+
+nav a:hover {
+  color: red;
+}
