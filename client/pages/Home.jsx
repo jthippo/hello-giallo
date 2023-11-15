@@ -35,6 +35,8 @@ export default function Home() {
           <option value="vote_average.asc">Lowest rating</option>
           <option value="primary_release_date.desc">Newest</option>
           <option value="primary_release_date.asc">Oldest</option>
+          <option value="popularity.desc">Most popular</option>
+          <option value="popularity.asc">Least popular</option>
         </select>
         <button>Hello Giallo</button>
 
