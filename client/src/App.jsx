@@ -9,7 +9,7 @@ function App() {
   return (
     <BrowserRouter>
       <h1>Hello Giallo</h1>
-      <p>Murder is bad</p>
+      <p>I don't think you're ready for this gialli</p>
 
       <Routes>
         <Route path="/" element={<Home />} />
