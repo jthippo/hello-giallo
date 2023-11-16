@@ -55,12 +55,12 @@ nav a:hover {
   padding: 1rem;
   text-align: center;
 }
+
 body {
   background-image: url("../components/ripper.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 85vh;
-  overflow: hidden;
 }
 
 main {
@@ -85,7 +85,7 @@ section {
 }
 
 .labelInputBox {
-  padding: 1rem;
+  padding: 0.8rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -144,10 +144,10 @@ select:focus {
 
 .result {
   border: 4px solid black;
-  width: 48vw;
+  width: 60vw;
   margin-top: 0.4rem;
   max-height: 33.5rem;
-  max-width: 40vw;
+  max-width: 50vw;
   display: flex;
   color: white;
   background-color: black;
@@ -169,8 +169,11 @@ select:focus {
   margin: 1rem 1rem;
 }
 
-.title h2 {
+.titleAndYear {
+  font-family: Cairo, serif;
   color: yellow;
+  text-align: center;
+  font-size: 2rem;
 }
 
 .ratingLinkBox {
@@ -235,8 +238,8 @@ select:focus {
   border: 4px solid black;
   background-color: white;
   margin: 6px;
-  width: 40vw;
-  height: 30vh;
+  width: 60vw;
+  height: 35vh;
   display: flex;
   align-items: center;
 }
@@ -266,7 +269,7 @@ select:focus {
 .loginContainer {
   display: flex;
   justify-content: center;
-  margin-top: 6rem;
+  padding-top: 6rem;
 }
 
 .adminBox {
@@ -283,7 +286,7 @@ select:focus {
 .gialliAdmin {
   border: 4px black solid;
   background-color: yellow;
-  width: 40vw;
+  width: 47vw;
   display: flex;
   margin: 0.5rem;
 }
@@ -295,7 +298,7 @@ select:focus {
 }
 
 .inputTitle {
-  width: 400px;
+  width: 300px;
   border: 2px solid black;
   padding: 0.3rem;
   font-size: 1rem;
@@ -320,7 +323,7 @@ select:focus {
   font-family: Cairo, serif;
   color: white;
   border-radius: 8px;
-  margin: 8px;
+  margin-left: 24px;
   background-color: red;
   transition-duration: 0.3s;
 }
@@ -335,7 +338,7 @@ select:focus {
   color: black;
   background-color: white;
   font-family: Cairo, serif;
-  font-size: 20px;
+  font-size: 16px;
   height: 3rem;
   width: 5rem;
   border-radius: 8px;
