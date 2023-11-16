@@ -11,7 +11,7 @@ export default function Home() {
 
   async function handleAPI(event) {
     event.preventDefault();
-    const API = `http://localhost:8080/API?from=${from}&to=${to}&rating=${rating}&sort=${sort}`;
+    const API = `https://hellogiallo.onrender.com/API?from=${from}&to=${to}&rating=${rating}&sort=${sort}`;
     const res = await axios.get(API);
     setGiallo(res.data);
   }

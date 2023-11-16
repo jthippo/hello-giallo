@@ -5,10 +5,7 @@ require("dotenv").config();
 const app = express();
 app.use(cors());
 app.use(express.json());
-const PORT = 8080;
 const axios = require("axios");
-
-app.listen(PORT, () => console.log(`App is running on port ${PORT}`));
 
 app.get("/", (_, response) => {
   response.json("Hello Giallo!");
