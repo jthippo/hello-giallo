@@ -15,14 +15,14 @@ export default function Form({ gialli, setGialli, giallo, getGialli }) {
 
   async function addGiallo(event) {
     event.preventDefault();
-    const API = "http://localhost:8080/gialli";
+    const API = "https://hellogiallo.onrender.com/gialli";
     const res = await axios.post(API, formData);
     setGialli([...gialli, res.data]);
   }
 
   async function updateGiallo(event) {
     event.preventDefault();
-    const API = `http://localhost:8080/gialli/${giallo._id}`;
+    const API = `https://hellogiallo.onrender.com/gialli/${giallo._id}`;
     await axios.put(API, formData);
     getGialli();
   }
