@@ -10,13 +10,13 @@ export default function Admin() {
   }, []);
 
   async function getGialli() {
-    const API = `http://localhost:8080/gialli/`;
+    const API = `https://hellogiallo.onrender.com/gialli/`;
     const res = await axios.get(API);
     setGialli(res.data);
   }
 
   async function deleteGialli(id) {
-    const API = `http://localhost:8080/gialli/${id}`;
+    const API = `https://hellogiallo.onrender.com/gialli/${id}`;
     await axios.delete(API);
     getGialli();
   }
