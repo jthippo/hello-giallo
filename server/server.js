@@ -53,9 +53,10 @@ app.get("/API", async (request, response) => {
 
   const wrangledData = {
     title: res_gialli.data.results[0].title,
-    poster: `https://image.tmdb.org/t/p/w400${res_gialli.data.results[0].poster_path}`,
+    poster: `https://image.tmdb.org/t/p/w300${res_gialli.data.results[0].poster_path}`,
     year: res_gialli.data.results[0].release_date,
     rating: res_gialli.data.results[0].vote_average,
+    overview: res_gialli.data.results[0].overview,
     link: `https://www.themoviedb.org/movie/${res_gialli.data.results[0].id}`,
   };
 

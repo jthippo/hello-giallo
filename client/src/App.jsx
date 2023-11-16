@@ -17,7 +17,7 @@ function App() {
             <br />
             <i>
               A genre of Italian cinema mixing mystery and thriller with
-              psychological elements.
+              psychological elements
             </i>
           </p>
         </div>
@@ -27,15 +27,14 @@ function App() {
           <Link to="/about">ABOUT</Link>
         </nav>
       </header>
-
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/admin" element={<Admin />} />
-      </Routes>
-
-      <footer></footer>
+      <body>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/admin" element={<Admin />} />
+        </Routes>
+      </body>
     </BrowserRouter>
   );
 }

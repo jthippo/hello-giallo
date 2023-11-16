@@ -34,6 +34,7 @@ nav {
 
 nav a {
   font-family: Cairo, serif;
+  font-size: 1.3rem;
   color: yellow;
   transition-duration: 0.4s;
   padding: 0.5rem;
@@ -43,24 +44,43 @@ nav a {
 nav a:hover {
   color: red;
   text-decoration: underline;
+  font-size: 1.4rem;
+}
+
+.topH2 {
+  padding-top: 3rem;
+}
+body {
+  background-image: url("../components/ripper.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 85vh;
+  overflow: hidden;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 section {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  width: 100%;
 }
 
 h2 {
   font-family: Cairo, serif;
   font-size: 40px;
-  color: black;
+  color: yellow;
   padding: 1rem;
+  text-align: center;
 }
 
 .criteriaBox {
   border: 4px solid black;
+  background-color: white;
   margin: 6px;
   display: flex;
   flex-direction: column;
@@ -115,9 +135,82 @@ button {
   border-radius: 8px;
   width: 30vw;
   margin: 8px;
+  background-color: yellow;
+  transition-duration: 0.3s;
+}
+
+button:hover {
+  background-color: black;
+  color: red;
+  cursor: pointer;
 }
 
 .result {
   border: 4px solid black;
   width: 48vw;
+  margin-top: 0.4rem;
+  max-height: 33.5rem;
+  max-width: 40vw;
+  display: flex;
+  color: white;
+  background-color: black;
+}
+
+.image {
+  align-self: center;
+  padding-left: 1rem;
+}
+
+img {
+  border: 4px solid yellow;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 1rem 1rem;
+}
+
+.title h2 {
+  color: yellow;
+}
+
+.ratingLinkBox {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.ratingBox {
+  width: 5rem;
+  height: 4rem;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+  font-size: 2rem;
+  border-radius: 16px;
+}
+
+.addGiallo {
+  width: 17vw;
+  height: 10vh;
+  font-size: 20px;
+  align-self: center;
+}
+
+.addGiallo:hover {
+  background-color: white;
+}
+
+.addGiallo::after {
+  content: "ADD TO WATCHLIST";
+}
+
+.addGiallo:hover::after {
+  content: "I DON'T WORK";
 }
