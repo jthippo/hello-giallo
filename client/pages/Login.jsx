@@ -20,7 +20,9 @@ export default function Login() {
           {user?.email === "hellomikefoster@gmail.com" && <Admin />}
         </div>
       ) : (
-        <LoginButton />
+        <div className="loginContainer">
+          <LoginButton />
+        </div>
       )}
     </>
   );

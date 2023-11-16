@@ -91,7 +91,7 @@ section {
   align-items: center;
 }
 
-input {
+.survey {
   width: 50px;
   border: 2px solid black;
   padding: 0.3rem;
@@ -158,7 +158,7 @@ select:focus {
   padding-left: 1rem;
 }
 
-img {
+.poster {
   border: 4px solid yellow;
 }
 
@@ -243,4 +243,112 @@ img {
 
 .aboutApp p {
   margin: 0 1rem;
+}
+
+.login {
+  font-family: Cairo, serif;
+  font-size: 40px;
+  color: black;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 30vw;
+  margin: 8px;
+  background-color: yellow;
+  transition-duration: 0.3s;
+}
+
+.login:hover {
+  background-color: black;
+  color: red;
+  cursor: pointer;
+}
+
+.loginContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 6rem;
+}
+
+.adminBox {
+  border: 4px black solid;
+  background-color: white;
+  width: 15rem;
+  height: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.gialliAdmin {
+  border: 4px black solid;
+  background-color: yellow;
+  width: 40vw;
+  display: flex;
+  margin: 0.5rem;
+}
+
+.gialliVertical {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem;
+}
+
+.inputTitle {
+  width: 400px;
+  border: 2px solid black;
+  padding: 0.3rem;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+
+.inputYear {
+  width: 50px;
+  border: 2px solid black;
+  padding: 0.3rem;
+  text-align: center;
+  font-size: 1rem;
+  border-radius: 4px;
+  margin: 0.2rem;
+}
+
+.gialloDelete {
+  width: 8vw;
+  height: 10vh;
+  font-size: 20px;
+  align-self: center;
+  font-family: Cairo, serif;
+  color: white;
+  border-radius: 8px;
+  margin: 8px;
+  background-color: red;
+  transition-duration: 0.3s;
+}
+
+.gialloDelete:hover {
+  color: yellow;
+  background-color: black;
+  cursor: pointer;
+}
+
+.updateAdd {
+  color: black;
+  background-color: white;
+  font-family: Cairo, serif;
+  font-size: 20px;
+  height: 3rem;
+  width: 5rem;
+  border-radius: 8px;
+  margin: 8px;
+}
+
+.updateAdd:hover {
+  color: green;
+  background-color: black;
+  cursor: pointer;
+}
+
+.database {
+  display: flex;
+  flex-wrap: wrap;
 }

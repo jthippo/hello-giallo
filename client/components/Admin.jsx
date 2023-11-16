@@ -22,17 +22,23 @@ export default function Admin() {
   }
 
   return (
-    <div>
+    <div className="database">
       {gialli.map((giallo) => {
         return (
-          <div key={giallo._id}>
-            <h2>{giallo.title}</h2>
-            <h3>{giallo.year}</h3>
-            <button onClick={() => deleteGialli(giallo._id)}>
-              Delete giallo
+          <div className="gialliAdmin" key={giallo._id}>
+            <div className="gialliVertical">
+              <div className="gialliTitleYear">
+                <h2>{giallo.title}</h2>
+                <h3>{giallo.year}</h3>
+              </div>
+              <Form giallo={giallo} getGialli={getGialli} />
+            </div>
+            <button
+              className="gialloDelete"
+              onClick={() => deleteGialli(giallo._id)}
+            >
+              DELETE GIALLO
             </button>
-
-            <Form giallo={giallo} getGialli={getGialli} />
           </div>
         );
       })}

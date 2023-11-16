@@ -26,6 +26,7 @@ export default function Home() {
               <div className="labelInputBox">
                 <label for="from">Released in or after...</label>
                 <input
+                  className="survey"
                   id="from"
                   maxlength="4"
                   placeholder="1963"
@@ -42,6 +43,7 @@ export default function Home() {
               <div className="labelInputBox">
                 <label for="to">Released in or before... </label>
                 <input
+                  className="survey"
                   id="to"
                   maxlength="4"
                   placeholder="1975"
@@ -60,6 +62,7 @@ export default function Home() {
                   With a TMDB user rating of at least...{" "}
                 </label>
                 <input
+                  className="survey"
                   id="rating"
                   maxlength="3"
                   step="0.1"
@@ -101,7 +104,7 @@ export default function Home() {
         {giallo.title && (
           <div className="result">
             <div className="image">
-              <img src={giallo.poster} />
+              <img className="poster" src={giallo.poster} />
             </div>
             <div className="details">
               <div className="title">

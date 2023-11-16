@@ -30,18 +30,20 @@ export default function Form({ gialli, setGialli, giallo, getGialli }) {
   return (
     <form onSubmit={giallo?.title ? updateGiallo : addGiallo}>
       <input
+        className="inputTitle"
         name="title"
         placeholder="Title"
         onChange={handleChange}
         value={formData.title}
       />
       <input
+        className="inputYear"
         name="year"
         placeholder="Year"
         onChange={handleChange}
         value={formData.year}
       />
-      <button>{giallo?.title ? "Update giallo" : "Add giallo"}</button>
+      <button className="updateAdd">{giallo?.title ? "Update" : "Add"}</button>
     </form>
   );
 }
