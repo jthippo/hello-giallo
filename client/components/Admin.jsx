@@ -42,8 +42,12 @@ export default function Admin() {
           </div>
         );
       })}
-      <h2>Add giallo</h2>
-      <Form gialli={gialli} setGialli={setGialli} />
+      <div className="newGiallo">
+        <div className="gialliVertical">
+          <h2>Add giallo</h2>
+          <Form gialli={gialli} setGialli={setGialli} />
+        </div>
+      </div>
     </div>
   );
 }

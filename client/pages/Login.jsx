@@ -15,9 +15,11 @@ export default function Login() {
     <>
       {isAuthenticated ? (
         <div>
-          <Profile />
-          <LogoutButton />
           {user?.email === "hellomikefoster@gmail.com" && <Admin />}
+          <div className="userDetails">
+            <Profile />
+            <LogoutButton />
+          </div>
         </div>
       ) : (
         <div className="loginContainer">

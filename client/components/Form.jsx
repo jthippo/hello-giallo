@@ -40,6 +40,7 @@ export default function Form({ gialli, setGialli, giallo, getGialli }) {
         className="inputYear"
         name="year"
         placeholder="Year"
+        maxlength="4"
         onChange={handleChange}
         value={formData.year}
       />
