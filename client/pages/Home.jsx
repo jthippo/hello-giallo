@@ -95,7 +95,7 @@ export default function Home() {
                 on themoviedb.org
               </p>
             </div>
-            <button>HELLO GIALLO</button>
+            <button className="submit">HELLO GIALLO</button>
           </form>
         </section>
         {giallo.title && (
@@ -105,7 +105,7 @@ export default function Home() {
             </div>
             <div className="details">
               <div className="title">
-                <h2>
+                <h2 className="titleAndYear">
                   {giallo.title} ({gialloDate.getFullYear()})
                 </h2>
               </div>
